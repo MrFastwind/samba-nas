@@ -1,0 +1,12 @@
+version: "3"
+services:
+  samba:
+    build: .
+    image: samba
+    ports:
+      - "445:445"
+    environment:
+      - UID=1003
+      - GID=1004
+    volumes:
+      - /mnt/ext-disk:/data
