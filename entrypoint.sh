@@ -7,7 +7,7 @@ GID=65534
 fi
 
 if ! id "media" >/dev/null 2>&1; then
-    groupadd media -g $GID && useradd media -G media -u $UID -D -h /dev/null -s /sbin/nologin
+    addgroup media -g $GID && adduser media -G media -u $UID -D -h /dev/null -s /sbin/nologin
 fi
 
 # Start Samba
