@@ -11,9 +11,11 @@ RUN apk --no-cache add \
 
 VOLUME ["/data"]
 
+WORKDIR /
+
 COPY smb.conf /etc/samba/smb.conf
 COPY entrypoint.sh /entrypoint.sh
 
 EXPOSE 445
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
