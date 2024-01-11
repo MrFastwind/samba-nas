@@ -14,7 +14,7 @@ VOLUME ["/data"]
 WORKDIR /
 
 COPY smb.conf /etc/samba/smb.conf
-COPY entrypoint.sh /entrypoint.sh
+COPY --chmod=0777 entrypoint.sh /entrypoint.sh
 RUN ["chmod", "+x", "/entrypoint.sh"]
 
 EXPOSE 445
