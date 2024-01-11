@@ -19,4 +19,4 @@ RUN ["chmod", "+x", "/entrypoint.sh"]
 
 EXPOSE 445
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh","/entrypoint.sh"]
