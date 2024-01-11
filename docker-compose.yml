@@ -4,6 +4,7 @@ services:
     build: .
     image: samba-anonymus
     pull_policy: build
+    container_name: nas
     ports:
       - "445:445"
     environment:

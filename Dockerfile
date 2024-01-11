@@ -15,6 +15,7 @@ WORKDIR /
 
 COPY smb.conf /etc/samba/smb.conf
 COPY entrypoint.sh /entrypoint.sh
+RUN ["chmod", "+x", "/entrypoint.sh"]
 
 EXPOSE 445
 
